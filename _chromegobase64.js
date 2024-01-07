@@ -1,3 +1,5 @@
+//本项目是对shiteThings项目的改进，配置地址可以直接使用为订阅地址更新
+//如果有需要你可以对每个节点增加前缀
 addEventListener('fetch', event => {
   event.respondWith(handleRequest(event.request));
 });
@@ -150,3 +152,5 @@ async function handleRequest(request) {
     headers: { 'Content-Type': 'text/html' },
   });
 }
+//提醒：如果使用workers部署更新订阅需要开代理,pages在部分网络可以不开代理，根据自身需要部署。
+// 鸣谢https://github.com/shiteThings/extractNodes/blob/main/ext.js
